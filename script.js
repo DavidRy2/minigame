@@ -1,4 +1,4 @@
-et numeroSecreto;
+let numeroSecreto;
 let tentativas;
 
 function gerarNumero() {
