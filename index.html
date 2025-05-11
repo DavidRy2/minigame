@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Acerte o Número!</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="container">
@@ -13,8 +13,12 @@
     <input type="number" id="guessInput" placeholder="Seu palpite" min="1" max="100" />
     <button onclick="checkGuess()">Tentar</button>
     <p id="message"></p>
-    <button onclick="resetGame()">Reiniciar</button>
-    <button onclick="toggleDarkMode()">Modo Escuro/Claro</button>
+
+    <div class="button-group">
+      <button onclick="resetGame()">Reiniciar</button>
+      <button onclick="toggleDarkMode()">Modo Escuro/Claro</button>
+    </div>
+    
     <p id="ranking"></p>
   </div>
 
