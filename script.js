@@ -1,4 +1,4 @@
-let numeroSecreto;
+et numeroSecreto;
 let tentativas;
 
 function gerarNumero() {
@@ -15,6 +15,7 @@ function checkGuess() {
 
   if (!guess || guess < 1 || guess > 100) {
     message.textContent = 'Digite um número válido entre 1 e 100.';
+    message.className = 'error';
     return;
   }
 
@@ -23,12 +24,15 @@ function checkGuess() {
 
   if (guess === numeroSecreto) {
     message.textContent = `🎉 Parabéns! Você acertou em ${tentativas} tentativas!`;
+    message.className = 'success';
     somVitoria.play();
     updateRanking();
   } else if (guess < numeroSecreto) {
     message.textContent = '🔽 Muito baixo. Tente novamente.';
+    message.className = 'error';
   } else {
     message.textContent = '🔼 Muito alto. Tente novamente.';
+    message.className = 'error';
   }
 }
 
@@ -36,6 +40,7 @@ function resetGame() {
   gerarNumero();
   document.getElementById('message').textContent = '';
   document.getElementById('guessInput').value = '';
+  document.getElementById('message').className = '';
 }
 
 function toggleDarkMode() {
