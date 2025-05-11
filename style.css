@@ -1,3 +1,4 @@
+/* Modo Claro */
 body {
   background: #f2f2f2;
   font-family: Arial, sans-serif;
@@ -14,7 +15,17 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-input[type="number"] {
+/* Modo Escuro */
+body.dark-mode {
+  background: #333;
+}
+
+.container.dark-mode {
+  background: #444;
+  color: white;
+}
+
+input[type="number"], button {
   padding: 10px;
   width: 80%;
   font-size: 16px;
@@ -22,9 +33,6 @@ input[type="number"] {
 }
 
 button {
-  padding: 10px 20px;
-  margin: 5px;
-  font-size: 16px;
   cursor: pointer;
 }
 
